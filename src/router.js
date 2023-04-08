@@ -1,18 +1,30 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
+import HomePage from "./pages/HomePage";
+import CuestionariosPage from "./pages/CuestionariosPage";
+import LoginPage from "./pages/LoginPage";
 import NotDound from "./pages/NotFound";
 
 const Router = () => {
     return(
         <Routes>
             <Route
-                path="/"
-                element={<Home/>}
+                path='/'
+                element={ <HomePage/> }
             />
 
             <Route
-                path="/*"
-                element={<NotDound/>}
+                path='/cuestionarios'
+                element={ <CuestionariosPage/> }
+            />
+
+            <Route
+                path='/login'
+                element={ <LoginPage/> }
+            />
+
+            <Route
+                path='/*'
+                element={ <NotDound/> }
             />
         </Routes>
     )
